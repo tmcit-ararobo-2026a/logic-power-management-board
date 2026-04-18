@@ -7812,13 +7812,13 @@
 	)
 	(symbol
 		(lib_id "Device:Q_NMOS_GDS")
-		(at 71.12 37.465 90)
+		(at 71.12 37.465 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "06a59cf1-4ce5-4c43-8ea3-24882589df95")
 		(property "Reference" "Q1"
 			(at 71.12 28.575 90)
@@ -7837,7 +7837,7 @@
 			)
 		)
 		(property "Footprint" "0Ikedalibrary:SOP_Advance"
-			(at 68.58 32.385 0)
+			(at 73.66 32.385 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8105,13 +8105,13 @@
 	)
 	(symbol
 		(lib_id "Device:Q_NMOS_GDS")
-		(at 71.12 82.55 90)
+		(at 71.12 82.55 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1132657b-572f-402c-afd8-ba604da83f54")
 		(property "Reference" "Q2"
 			(at 71.12 73.66 90)
@@ -8130,7 +8130,7 @@
 			)
 		)
 		(property "Footprint" "0Ikedalibrary:SOP_Advance"
-			(at 68.58 77.47 0)
+			(at 73.66 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9049,13 +9049,13 @@
 	)
 	(symbol
 		(lib_id "Device:Q_NMOS_GDS")
-		(at 71.12 127.635 90)
+		(at 71.12 127.635 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "337fb3c2-6448-4e00-b76a-09ceffa2cf3b")
 		(property "Reference" "Q3"
 			(at 71.12 118.745 90)
@@ -9074,7 +9074,7 @@
 			)
 		)
 		(property "Footprint" "0Ikedalibrary:SOP_Advance"
-			(at 68.58 122.555 0)
+			(at 73.66 122.555 0)
 			(effects
 				(font
 					(size 1.27 1.27)
