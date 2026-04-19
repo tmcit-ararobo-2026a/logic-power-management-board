@@ -3759,7 +3759,7 @@
 		(uuid "0608564f-73a7-41f4-9c93-99e413c8ca70")
 	)
 	(junction
-		(at 57.785 177.8)
+		(at 76.2 177.8)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "08011f7d-9d3f-484b-b714-4b8aa1bc6ec6")
@@ -3897,6 +3897,12 @@
 		(uuid "579b7e5f-ba3d-4f45-ad30-9d2451fe7dfc")
 	)
 	(junction
+		(at 59.69 168.275)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5b559efb-d38a-4c09-9904-60bf598033a0")
+	)
+	(junction
 		(at 133.985 121.285)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4023,6 +4029,18 @@
 		(uuid "ad0d881b-c975-4d82-9820-c1115f71a230")
 	)
 	(junction
+		(at 59.69 186.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b07a24ef-10a8-42f7-8619-ddb06956dd4b")
+	)
+	(junction
+		(at 76.2 168.275)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b5e521af-4185-4c47-ad5b-3c1d660e54f7")
+	)
+	(junction
 		(at 62.23 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4039,12 +4057,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cfd6bca5-27f5-40ce-a654-bb289aaf8d24")
-	)
-	(junction
-		(at 57.785 168.275)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d0ff1c11-b481-462a-98d3-417dac320eba")
 	)
 	(junction
 		(at 54.61 110.49)
@@ -4336,23 +4348,23 @@
 	)
 	(wire
 		(pts
-			(xy 59.055 177.8) (xy 57.785 177.8)
+			(xy 59.69 186.69) (xy 41.275 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10fdc559-7f81-46be-a049-d1765e2d2312")
+	)
+	(wire
+		(pts
+			(xy 77.47 177.8) (xy 76.2 177.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "11438960-beaf-46e2-99ad-7844aec1a6f6")
-	)
-	(wire
-		(pts
-			(xy 41.275 168.275) (xy 57.785 168.275)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "117fb83f-956f-4e93-8b7b-8d0853cafc17")
 	)
 	(wire
 		(pts
@@ -4443,6 +4455,16 @@
 			(type default)
 		)
 		(uuid "1b104a80-5861-4b18-8ea0-dd9788439230")
+	)
+	(wire
+		(pts
+			(xy 41.275 168.275) (xy 59.69 168.275)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bb1f117-30f6-418e-8130-df0ca58bcc51")
 	)
 	(wire
 		(pts
@@ -4673,6 +4695,16 @@
 			(type default)
 		)
 		(uuid "2f5242b2-2c37-483d-86eb-f28f2ef5f6ca")
+	)
+	(wire
+		(pts
+			(xy 76.2 168.275) (xy 78.105 168.275)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30626469-dbd8-44bd-bed5-f1c87a592fb8")
 	)
 	(wire
 		(pts
@@ -5016,6 +5048,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 168.275) (xy 59.69 169.545)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54c735dc-1128-428b-af20-898b7a9d1bf4")
+	)
+	(wire
+		(pts
 			(xy 50.165 40.64) (xy 50.165 34.925)
 		)
 		(stroke
@@ -5073,6 +5115,16 @@
 			(type default)
 		)
 		(uuid "5af767fd-02b3-4998-8d6a-f0ad2dffbfc0")
+	)
+	(wire
+		(pts
+			(xy 59.69 186.69) (xy 59.69 177.165)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e405ede-16a3-4b17-af51-f722605effea")
 	)
 	(wire
 		(pts
@@ -5396,7 +5448,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.785 179.07) (xy 57.785 177.8)
+			(xy 76.2 179.07) (xy 76.2 177.8)
 		)
 		(stroke
 			(width 0)
@@ -5443,6 +5495,16 @@
 			(type default)
 		)
 		(uuid "8b2f08c0-9fe5-4d38-94eb-c0bf2aac4746")
+	)
+	(wire
+		(pts
+			(xy 59.69 168.275) (xy 76.2 168.275)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b646b7a-ced5-463d-8a6a-8b006739e350")
 	)
 	(wire
 		(pts
@@ -5516,16 +5578,6 @@
 	)
 	(wire
 		(pts
-			(xy 57.785 168.275) (xy 59.69 168.275)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "94b95865-603e-40d9-b336-129342c83f8c")
-	)
-	(wire
-		(pts
 			(xy 234.315 138.43) (xy 257.048 138.43)
 		)
 		(stroke
@@ -5576,7 +5628,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.785 186.69) (xy 41.275 186.69)
+			(xy 76.2 186.69) (xy 59.69 186.69)
 		)
 		(stroke
 			(width 0)
@@ -5606,7 +5658,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.785 168.91) (xy 57.785 168.275)
+			(xy 76.2 168.91) (xy 76.2 168.275)
 		)
 		(stroke
 			(width 0)
@@ -6176,7 +6228,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.785 177.8) (xy 57.785 176.53)
+			(xy 76.2 177.8) (xy 76.2 176.53)
 		)
 		(stroke
 			(width 0)
@@ -7186,7 +7238,7 @@
 	)
 	(global_label "ADC1_CH4"
 		(shape input)
-		(at 59.055 177.8 0)
+		(at 77.47 177.8 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7196,7 +7248,7 @@
 		)
 		(uuid "806f60b8-2da5-4f1a-a70a-0a552a742b47")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 71.6559 177.8 0)
+			(at 90.0709 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7296,7 +7348,7 @@
 	)
 	(global_label "OUT"
 		(shape input)
-		(at 59.69 168.275 0)
+		(at 78.105 168.275 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7306,7 +7358,7 @@
 		)
 		(uuid "93c373b7-4c4c-4212-89e8-4102c0a8791f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 66.3038 168.275 0)
+			(at 84.7188 168.275 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7943,7 +7995,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "001a541d-7372-4d1d-9354-457e8cc51453")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR120"
 			(at 71.12 73.025 0)
 			(effects
 				(font
@@ -7993,7 +8045,7 @@
 		(instances
 			(project ""
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR120")
 					(unit 1)
 				)
 			)
@@ -8454,7 +8506,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "15c52318-73aa-4806-b0e9-b67c520015f1")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR117"
 			(at 218.44 48.895 0)
 			(effects
 				(font
@@ -8504,7 +8556,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR117")
 					(unit 1)
 				)
 			)
@@ -8675,7 +8727,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "24bc8e74-e9f3-4d02-adb4-04201ee334f3")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR110"
 			(at 176.53 34.29 0)
 			(effects
 				(font
@@ -8725,7 +8777,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR110")
 					(unit 1)
 				)
 			)
@@ -8740,7 +8792,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "272bb117-3038-42a0-b457-6309ffbbefb3")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR111"
 			(at 168.91 46.99 0)
 			(effects
 				(font
@@ -8790,7 +8842,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR111")
 					(unit 1)
 				)
 			)
@@ -9110,7 +9162,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "30564ea9-55d6-4910-ae41-015d0d7e6f29")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR102"
 			(at 107.95 146.05 0)
 			(effects
 				(font
@@ -9160,7 +9212,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR102")
 					(unit 1)
 				)
 			)
@@ -9472,7 +9524,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3a3a7498-a4ca-4232-b331-9f76de8d65db")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR104"
 			(at 133.985 182.88 0)
 			(effects
 				(font
@@ -9522,7 +9574,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR104")
 					(unit 1)
 				)
 			)
@@ -10006,7 +10058,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "46d985da-9c19-4cc8-9749-b3a66bf29764")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR107"
 			(at 250.825 140.97 0)
 			(effects
 				(font
@@ -10056,7 +10108,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR107")
 					(unit 1)
 				)
 			)
@@ -10072,7 +10124,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4c75de80-2097-45d2-be16-fdb220f62b7a")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR103"
 			(at 71.12 163.195 0)
 			(effects
 				(font
@@ -10122,7 +10174,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR103")
 					(unit 1)
 				)
 			)
@@ -10206,7 +10258,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "50fa3564-0b53-46df-84fe-05f299966cbd")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR119"
 			(at 71.12 118.11 0)
 			(effects
 				(font
@@ -10256,7 +10308,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR119")
 					(unit 1)
 				)
 			)
@@ -10414,7 +10466,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5ae11ca2-d3e4-4ce6-9dd4-5e620241f39c")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR114"
 			(at 189.865 139.7 0)
 			(effects
 				(font
@@ -10464,7 +10516,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR114")
 					(unit 1)
 				)
 			)
@@ -10548,7 +10600,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "63de84a4-7533-453e-bc8a-456920cc1ed4")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR126"
 			(at 121.92 48.895 0)
 			(effects
 				(font
@@ -10598,7 +10650,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR126")
 					(unit 1)
 				)
 			)
@@ -10939,7 +10991,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "788c509c-5d02-434b-a235-c9a4ad945fdc")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR105"
 			(at 187.96 100.965 0)
 			(effects
 				(font
@@ -10989,7 +11041,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR105")
 					(unit 1)
 				)
 			)
@@ -11004,7 +11056,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "828d0185-320a-4788-94cd-b6e813cb8c9b")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR124"
 			(at 120.65 76.2 0)
 			(effects
 				(font
@@ -11054,7 +11106,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR124")
 					(unit 1)
 				)
 			)
@@ -11292,7 +11344,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c1edf4c-4505-4c08-b851-db4aa9526a18")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR115"
 			(at 194.945 158.75 0)
 			(effects
 				(font
@@ -11342,7 +11394,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR115")
 					(unit 1)
 				)
 			)
@@ -11505,7 +11557,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 57.785 172.72 180)
+		(at 76.2 172.72 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11513,7 +11565,7 @@
 		(dnp no)
 		(uuid "9c78c98e-bfdd-466e-babb-c6d3acba2b67")
 		(property "Reference" "R7"
-			(at 59.69 171.4499 0)
+			(at 78.105 171.4499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11522,7 +11574,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 59.69 173.9899 0)
+			(at 78.105 173.9899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11531,7 +11583,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 59.563 172.72 90)
+			(at 77.978 172.72 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11540,7 +11592,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 57.785 172.72 0)
+			(at 76.2 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11549,7 +11601,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 57.785 172.72 0)
+			(at 76.2 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12030,7 +12082,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a47225ae-9ee0-4747-aaf9-e30ed91d8710")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR112"
 			(at 153.035 83.82 0)
 			(effects
 				(font
@@ -12080,7 +12132,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR112")
 					(unit 1)
 				)
 			)
@@ -12169,7 +12221,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a562f53e-0c9e-4a5f-8fb2-f18c4b953daa")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR127"
 			(at 107.95 32.385 0)
 			(effects
 				(font
@@ -12219,7 +12271,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR127")
 					(unit 1)
 				)
 			)
@@ -12235,7 +12287,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a5de5cb2-790b-4aef-ba4e-0c486aa680d9")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR113"
 			(at 155.575 69.85 0)
 			(effects
 				(font
@@ -12285,7 +12337,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR113")
 					(unit 1)
 				)
 			)
@@ -12300,7 +12352,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a6ec731a-301f-4c9e-bff4-aaed42720a95")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR109"
 			(at 134.62 32.385 0)
 			(effects
 				(font
@@ -12350,7 +12402,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR109")
 					(unit 1)
 				)
 			)
@@ -12366,7 +12418,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aa2d0729-09bf-4051-8d87-9aed0b95054f")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR108"
 			(at 248.285 107.315 0)
 			(effects
 				(font
@@ -12416,7 +12468,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR108")
 					(unit 1)
 				)
 			)
@@ -12431,7 +12483,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "aceb544b-23fa-4de6-9566-84dba0344659")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR101"
 			(at 107.95 139.7 0)
 			(effects
 				(font
@@ -12481,7 +12533,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR101")
 					(unit 1)
 				)
 			)
@@ -12734,7 +12786,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b619a60f-39ef-4022-9307-cd4110d375b4")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR125"
 			(at 122.555 70.485 0)
 			(effects
 				(font
@@ -12784,7 +12836,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR125")
 					(unit 1)
 				)
 			)
@@ -12952,6 +13004,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 59.69 173.355 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ba4c3969-5341-4dbf-8b49-5c6f77346848")
+		(property "Reference" "C13"
+			(at 63.5 171.1959 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1000μF35V"
+			(at 63.5 173.7359 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm"
+			(at 60.6552 177.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g102722/"
+			(at 59.69 173.355 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 59.69 173.355 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "44225183-a926-4a39-83e6-3577ee734d67")
+		)
+		(pin "1"
+			(uuid "bc1a06a8-47aa-4f1e-b71f-72f806613079")
+		)
+		(instances
+			(project "logic-power-management-board"
+				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
+					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_SPDT_312")
 		(at 262.382 154.178 90)
 		(unit 1)
@@ -13032,7 +13154,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c0b490b9-443f-4125-98c8-e6da90be5007")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR123"
 			(at 121.285 92.71 0)
 			(effects
 				(font
@@ -13082,7 +13204,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR123")
 					(unit 1)
 				)
 			)
@@ -13374,7 +13496,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ce3738c5-2d81-474f-915a-f46a65a030a9")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR106"
 			(at 208.28 109.855 0)
 			(effects
 				(font
@@ -13424,7 +13546,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR106")
 					(unit 1)
 				)
 			)
@@ -13432,7 +13554,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 57.785 182.88 180)
+		(at 76.2 182.88 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13440,7 +13562,7 @@
 		(dnp no)
 		(uuid "d077a6a2-8f5b-47fe-a05d-cb731b1c46ca")
 		(property "Reference" "R8"
-			(at 59.69 181.6099 0)
+			(at 78.105 181.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13449,7 +13571,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 59.69 184.1499 0)
+			(at 78.105 184.1499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13458,7 +13580,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 59.563 182.88 90)
+			(at 77.978 182.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13467,7 +13589,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 57.785 182.88 0)
+			(at 76.2 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13476,7 +13598,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 57.785 182.88 0)
+			(at 76.2 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13578,7 +13700,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d4c309d5-68ed-49a8-be87-1c6ad23f4c68")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR122"
 			(at 122.555 85.725 0)
 			(effects
 				(font
@@ -13628,7 +13750,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR122")
 					(unit 1)
 				)
 			)
@@ -13954,7 +14076,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dd07a56f-d82e-48bb-b60d-71c8d365b2cc")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR121"
 			(at 41.275 194.31 0)
 			(effects
 				(font
@@ -14004,7 +14126,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR121")
 					(unit 1)
 				)
 			)
@@ -14330,7 +14452,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ee5a1bdb-68c0-4596-9509-3a1d60fb8347")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR118"
 			(at 204.47 36.195 0)
 			(effects
 				(font
@@ -14380,7 +14502,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR118")
 					(unit 1)
 				)
 			)
@@ -14465,7 +14587,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f89584ef-90d1-4583-8433-9d685fe5985d")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR116"
 			(at 240.665 161.29 0)
 			(effects
 				(font
@@ -14515,7 +14637,7 @@
 		(instances
 			(project "logic-power-management-board"
 				(path "/948f3f18-646c-420a-a89b-53390242bc6e"
-					(reference "#PWR?")
+					(reference "#PWR116")
 					(unit 1)
 				)
 			)
