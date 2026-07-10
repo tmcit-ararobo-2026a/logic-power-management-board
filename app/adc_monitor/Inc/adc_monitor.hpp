@@ -8,6 +8,10 @@ namespace adc_monitor {
 #define ADC_CH_NUM 4
 
 enum class channel : uint8_t;
+enum class mode : uint8_t;
+
+struct adc_monito_buffer_TypeDef;
+adc_monitor_buffer_TypeDef adc_monitor;
 
 class adc
 {
@@ -16,15 +20,27 @@ private:
 
     uint32_t sampling[ADC_CH_NUM];
 
+    ADC_ChannelConfTypeDef adc_ch_conf;
+    ADC_InjectionConfTypeDef adc_injection_ch_conf;
+
+    uint32_t channel_(channel ch_);
+
 public:
     adc(ADC_HandleTypeDef* _hadc) : hadc_(_hadc) {};
 
     void init();
 
-    uint32_t AnalogRead(channel ch_);
+    float Read_Polling(channel ch_);
+    float Read_IT(channel ch_);
+    float Read_DMA(channel ch_);
+
+    float Read_fast_Polling(channel ch_);
+    float Read_fast_IT(channel ch_);
+    float Read_fast_DMA(channel ch_);
 };
 
 enum class channel : uint8_t {
+    CH_0,
     CH_1,
     CH_2,
     CH_3,
@@ -43,6 +59,25 @@ enum class channel : uint8_t {
     CH_16,
     CH_17,
     CH_18,
+};
+
+enum class mode : uint8_t {
+    Polling,
+    IT,
+    DMA,
+};
+
+enum offset_data {
+    Min_Data       = 0x000,
+    Max_Data_6bit  = 0x3F,
+    Max_Data_8bit  = 0xFF,
+    Max_Data_10bit = 0x3FF,
+    Max_Data_12bit = 0xFFF,
+};
+
+struct adc_monitor_buffer_TypeDef {
+    HAL_StatusTypeDef HAL_ADCEx_Calibration_Start;
+    uint32_t HAL_ADCEx_Calibration_GetValue;
 };
 
 }  // namespace adc_monitor
