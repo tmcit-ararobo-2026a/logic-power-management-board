@@ -24,7 +24,7 @@ gn10_can::devices::PowerManagerServer server(fdcan_bus, 1);
 
 adc_monitor::adc analog(&hadc1);
 
-float voltage_data_ch[4] = {0};
+// float voltage_data_ch[4] = {0};
 
 constexpr uint32_t heartbeat_toggle_interval_ms = 200;
 
@@ -33,7 +33,7 @@ void update_heartbeat_led()
     static uint32_t last_time = 0;
     if ((HAL_GetTick() - last_time) >= heartbeat_toggle_interval_ms) {
         last_time = HAL_GetTick();
-        HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+        HAL_GPIO_TogglePin(LED4_GPIO_Port, LED4_Pin);
     }
 }
 
@@ -64,7 +64,13 @@ void setup()
 void loop()
 {
     if (server.get_new_init(config)) {
-        HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, GPIO_PIN_SET);
+    }
+
+    if (analog.Read_Polling(adc_monitor::channel::CH_4) >= 1.0f) {
+        HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
+    } else {
+        HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
     }
 
     update_heartbeat_led();

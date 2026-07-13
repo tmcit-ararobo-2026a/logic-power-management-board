@@ -5,9 +5,9 @@ namespace adc_monitor {
 
 void adc::init()
 {
-    adc_monitor.HAL_ADCEx_Calibration_Start = HAL_ADCEx_Calibration_Start(hadc_, ADC_SINGLE_ENDED);
+    adc_monitor_.HAL_ADCEx_Calibration_Start = HAL_ADCEx_Calibration_Start(hadc_, ADC_SINGLE_ENDED);
 
-    adc_monitor.HAL_ADCEx_Calibration_GetValue =
+    adc_monitor_.HAL_ADCEx_Calibration_GetValue =
         HAL_ADCEx_Calibration_GetValue(hadc_, ADC_SINGLE_ENDED);
 }
 
@@ -28,7 +28,7 @@ float adc::Read_Polling(channel ch_)
 
     HAL_ADC_Start(hadc_);
 
-    if (HAL_ADC_PollForConversion(hadc_, 1)) {
+    if (!HAL_ADC_PollForConversion(hadc_, 1)) {
         return 3.3f * (float)HAL_ADC_GetValue(hadc_) / 4095.0f;
     }
 

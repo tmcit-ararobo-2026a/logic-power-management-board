@@ -9,13 +9,16 @@ namespace adc_monitor {
 
 enum class channel : uint8_t;
 enum class mode : uint8_t;
-
-struct adc_monito_buffer_TypeDef;
-adc_monitor_buffer_TypeDef adc_monitor;
-
 class adc
 {
 private:
+    struct adc_monitor_buffer_TypeDef {
+        HAL_StatusTypeDef HAL_ADCEx_Calibration_Start;
+        uint32_t HAL_ADCEx_Calibration_GetValue;
+    };
+
+    adc_monitor_buffer_TypeDef adc_monitor_;
+
     ADC_HandleTypeDef* hadc_;
 
     uint32_t sampling[ADC_CH_NUM];
@@ -73,11 +76,6 @@ enum offset_data {
     Max_Data_8bit  = 0xFF,
     Max_Data_10bit = 0x3FF,
     Max_Data_12bit = 0xFFF,
-};
-
-struct adc_monitor_buffer_TypeDef {
-    HAL_StatusTypeDef HAL_ADCEx_Calibration_Start;
-    uint32_t HAL_ADCEx_Calibration_GetValue;
 };
 
 }  // namespace adc_monitor
