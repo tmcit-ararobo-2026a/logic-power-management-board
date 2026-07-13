@@ -1,5 +1,5 @@
 
-#include "adc_monitor.hpp"
+#include "adc_monitor/Inc/adc_monitor.hpp"
 
 namespace adc_monitor {
 
@@ -150,7 +150,7 @@ uint32_t adc::channel_(channel ch_)
             break;
     }
 
-    return ADC_CHANNEL_0;
+    return ADC_CHANNEL_1;
 }
 
 }  // namespace adc_monitor
