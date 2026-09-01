@@ -1,5 +1,5 @@
 
-#include "adc_monitor/Inc/adc_monitor.hpp"
+#include "app/adc_monitor.hpp"
 
 namespace adc_monitor {
 

@@ -3,13 +3,13 @@ cmake_minimum_required(VERSION 3.22)
 enable_language(C CXX ASM)
 
 add_library(logic_power_management STATIC 
-    logic_power_management_board/Src/logic_power_management_board.cpp
-    adc_monitor/Src/adc_monitor.cpp
-    fdcan/Src/fdcan_driver.cpp
+    src/logic_power_management_board.cpp
+    src/adc_monitor.cpp
+    src/fdcan_driver.cpp
 )
 
 target_include_directories(logic_power_management PUBLIC
-    include/..
+    include/
 )
 
 target_compile_features(logic_power_management PUBLIC cxx_std_17)

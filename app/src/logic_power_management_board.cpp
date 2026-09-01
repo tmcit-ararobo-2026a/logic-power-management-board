@@ -1,14 +1,14 @@
 
-#include "logic_power_management_board/Inc/logic_power_management_board.hpp"
+#include "app/logic_power_management_board.hpp"
 
 #include <cstdint>
 //
 
 #include "adc.h"
-#include "adc_monitor/Inc/adc_monitor.hpp"
+#include "app/adc_monitor.hpp"
 // adc
 
-#include "fdcan/Inc/fdcan_driver.hpp"
+#include "app/fdcan_driver.hpp"
 #include "gn10_can/core/fdcan_bus.hpp"
 #include "gn10_can/devices/power_manager_server.hpp"
 #include "gn10_can/devices/power_manager_types.hpp"

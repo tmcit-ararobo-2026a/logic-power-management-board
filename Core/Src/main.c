@@ -27,7 +27,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "../../app/logic_power_management_board/Inc/logic_power_management_board.hpp"
+#include "app/logic_power_management_board.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
