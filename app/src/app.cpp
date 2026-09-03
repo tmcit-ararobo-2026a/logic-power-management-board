@@ -55,14 +55,14 @@ void loop()
     }
     if ((now_ms - sensor_update_last_tick) >= config.sensor_rate_ms) {
         sensor_update_last_tick = now_ms;
-        float voltage_in[3];
+        std::array<float, 3> voltage_in{};
         float voltage_out;
         voltage_out   = static_cast<float>(adc_raw_value[0]) * 3.3f / 0b111111111111 / 11.0f;
         voltage_in[0] = static_cast<float>(adc_raw_value[3]) * 3.3f / 0b111111111111 / 11.0f;
         voltage_in[1] = static_cast<float>(adc_raw_value[2]) * 3.3f / 0b111111111111 / 11.0f;
         voltage_in[2] = static_cast<float>(adc_raw_value[1]) * 3.3f / 0b111111111111 / 11.0f;
-        gn10_can::devices::power_manager::Sensor sensor;
-        server.set_sensor(sensor);
+        std::array<float, 4> voltages{voltage_in[0], voltage_in[1], voltage_in[2], voltage_out};
+        server.set_voltages(voltages);
     }
 
     update_heartbeat_led();
