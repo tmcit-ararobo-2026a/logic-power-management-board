@@ -2,17 +2,14 @@
 #include "app/app.hpp"
 
 #include <cstdint>
-//
 
 #include "adc.h"
-#include "fdcan.h"
-// adc
-
+#include "app/can_callback_helper.hpp"
 #include "app/fdcan_driver.hpp"
+#include "fdcan.h"
 #include "gn10_can/core/fdcan_bus.hpp"
 #include "gn10_can/devices/power_manager_server.hpp"
 #include "gn10_can/devices/power_manager_types.hpp"
-// fdcan
 
 namespace {
 
@@ -75,6 +72,16 @@ extern "C" {
  */
 void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef* hfdcan, uint32_t RxFifo0ITs)
 {
-    fdcan_bus.update();
+    (void)RxFifo0ITs;
+    if (process_fdcan_fifo(hfdcan, &hfdcan1, fdcan_bus, FDCAN_RX_FIFO0)) return;
+}
+
+/**
+ * @brief Receive callback for FDCAN FIFO1.
+ */
+void HAL_FDCAN_RxFifo1Callback(FDCAN_HandleTypeDef* hfdcan, uint32_t RxFifo1ITs)
+{
+    (void)RxFifo1ITs;
+    if (process_fdcan_fifo(hfdcan, &hfdcan1, fdcan_bus, FDCAN_RX_FIFO1)) return;
 }
 }
