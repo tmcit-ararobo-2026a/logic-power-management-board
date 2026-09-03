@@ -22,28 +22,17 @@ gn10_can::drivers::FDCANDriver fdcan_driver(&hfdcan1);
 gn10_can::FDCANBus fdcan_bus(fdcan_driver);
 gn10_can::devices::PowerManagerServer server(fdcan_bus, 1);
 
-constexpr uint32_t heartbeat_toggle_interval_ms = 200;
+uint16_t adc_raw_value[4];
+uint32_t sensor_update_last_tick;
+
+constexpr uint32_t HEARTBEAT_TOGGLE_INTERVAL_MS = 200;
 
 void update_heartbeat_led()
 {
     static uint32_t last_time = 0;
-    if ((HAL_GetTick() - last_time) >= heartbeat_toggle_interval_ms) {
+    if ((HAL_GetTick() - last_time) >= HEARTBEAT_TOGGLE_INTERVAL_MS) {
         last_time = HAL_GetTick();
         HAL_GPIO_TogglePin(LED4_GPIO_Port, LED4_Pin);
-    }
-}
-
-void update_sensor()
-{
-    static uint32_t last_tick = 0;
-    if ((HAL_GetTick() - last_tick) >= config.sensor_rate_ms) {
-        last_tick = HAL_GetTick();
-        gn10_can::devices::power_manager::Sensor sensor_msg[4];
-        /*4ch分の電圧を取得*/
-        for (uint8_t i = 0; i < 4; i++) {
-            /*電圧を取得してCANで送信*/
-            server.set_sensor(sensor_msg[i]);
-        }
     }
 }
 
@@ -52,16 +41,31 @@ void update_sensor()
 void setup()
 {
     fdcan_driver.init();
+    if (HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_raw_value, 4) != HAL_OK) {
+        Error_Handler();
+    }
+    sensor_update_last_tick = HAL_GetTick();
 }
 
 void loop()
 {
+    const uint32_t now_ms = HAL_GetTick();
     if (server.get_new_init(config)) {
         HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, GPIO_PIN_SET);
     }
+    if ((now_ms - sensor_update_last_tick) >= config.sensor_rate_ms) {
+        sensor_update_last_tick = now_ms;
+        float voltage_in[3];
+        float voltage_out;
+        voltage_out   = static_cast<float>(adc_raw_value[0]) * 3.3f / 0b111111111111 / 11.0f;
+        voltage_in[0] = static_cast<float>(adc_raw_value[3]) * 3.3f / 0b111111111111 / 11.0f;
+        voltage_in[1] = static_cast<float>(adc_raw_value[2]) * 3.3f / 0b111111111111 / 11.0f;
+        voltage_in[2] = static_cast<float>(adc_raw_value[1]) * 3.3f / 0b111111111111 / 11.0f;
+        gn10_can::devices::power_manager::Sensor sensor;
+        server.set_sensor(sensor);
+    }
 
     update_heartbeat_led();
-    update_sensor();
 }
 
 extern "C" {
