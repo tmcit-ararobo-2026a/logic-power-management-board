@@ -4,12 +4,12 @@
 #include <cstdint>
 
 #include "adc.h"
-#include "app/can_callback_helper.hpp"
-#include "app/fdcan_driver.hpp"
 #include "fdcan.h"
 #include "gn10_can/core/fdcan_bus.hpp"
 #include "gn10_can/devices/power_manager_server.hpp"
 #include "gn10_can/devices/power_manager_types.hpp"
+#include "gn10_stm32_fdcan_driver/can_callback_helper.hpp"
+#include "gn10_stm32_fdcan_driver/fdcan_driver.hpp"
 
 namespace {
 
