@@ -4,6 +4,7 @@
 #include <cstdint>
 
 #include "adc.h"
+#include "app/serial_printf.hpp"
 #include "fdcan.h"
 #include "gn10_can/core/fdcan_bus.hpp"
 #include "gn10_can/devices/power_manager_server.hpp"
@@ -38,6 +39,7 @@ void update_heartbeat_led()
 void setup()
 {
     fdcan_driver.init();
+    HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
     if (HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adc_raw_value, 4) != HAL_OK) {
         Error_Handler();
     }
@@ -54,12 +56,19 @@ void loop()
         sensor_update_last_tick = now_ms;
         std::array<float, 3> voltage_in{};
         float voltage_out;
-        voltage_out   = static_cast<float>(adc_raw_value[0]) * 3.3f / 4095.0f / 11.0f;
-        voltage_in[0] = static_cast<float>(adc_raw_value[3]) * 3.3f / 4095.0f / 11.0f;
-        voltage_in[1] = static_cast<float>(adc_raw_value[2]) * 3.3f / 4095.0f / 11.0f;
-        voltage_in[2] = static_cast<float>(adc_raw_value[1]) * 3.3f / 4095.0f / 11.0f;
+        voltage_in[0] = static_cast<float>(adc_raw_value[0]) * 3.3f / 4095.0f * 11.0f;
+        voltage_in[1] = static_cast<float>(adc_raw_value[1]) * 3.3f / 4095.0f * 11.0f * 1.4f;
+        voltage_in[2] = static_cast<float>(adc_raw_value[2]) * 3.3f / 4095.0f * 11.0f;
+        voltage_out   = static_cast<float>(adc_raw_value[3]) * 3.3f / 4095.0f * 11.0f;
         std::array<float, 4> voltages{voltage_in[0], voltage_in[1], voltage_in[2], voltage_out};
         server.set_voltages(voltages);
+        serial_printf(
+            "%d, %d, %d, %d\n",
+            int(voltage_in[0] * 1000),
+            int(voltage_in[1] * 1000),
+            int(voltage_in[2] * 1000),
+            int(voltage_out * 1000)
+        );
     }
 
     update_heartbeat_led();

@@ -4,6 +4,7 @@ enable_language(C CXX ASM)
 
 add_library(app STATIC 
     src/app.cpp
+    src/serial_printf.cpp
 )
 
 target_include_directories(app PUBLIC
