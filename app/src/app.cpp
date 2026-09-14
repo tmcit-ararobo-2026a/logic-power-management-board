@@ -57,7 +57,7 @@ void loop()
         std::array<float, 3> voltage_in{};
         float voltage_out;
         voltage_in[0] = static_cast<float>(adc_raw_value[0]) * 3.3f / 4095.0f * 11.0f;
-        voltage_in[1] = static_cast<float>(adc_raw_value[1]) * 3.3f / 4095.0f * 11.0f * 1.4f;
+        voltage_in[1] = static_cast<float>(adc_raw_value[1]) * 3.3f / 4095.0f * 11.0f;
         voltage_in[2] = static_cast<float>(adc_raw_value[2]) * 3.3f / 4095.0f * 11.0f;
         voltage_out   = static_cast<float>(adc_raw_value[3]) * 3.3f / 4095.0f * 11.0f;
         std::array<float, 4> voltages{voltage_in[0], voltage_in[1], voltage_in[2], voltage_out};
